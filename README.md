@@ -16,20 +16,20 @@ You need sass to generate the css file and you need uglify-merge-js to generate 
 
 You can install the packages with npm like this:
 
-`npm i -g node-sass uglify-merge-js`
+`npm i -g uglify-merge-js sass`
 
 ###  Generate the files
-CSS
+JS
 
 `uglify-merge -s './assets/javascripts' -o '../../dist/js/scripts.min.js'`
 
-JS
+CSS
 
-`sass --style compressed --no-cache  assets/scss/style.scss:dist/css/style.min.css`
+`sass --style compressed  assets/scss/style.scss:dist/css/style.min.css`
 
 CSS & JS
 
-`uglify-merge -s './assets/javascripts' -o '../../dist/js/scripts.min.js' && sass --style compressed --no-cache  assets/scss/style.scss:dist/css/style.min.css`
+`uglify-merge -s './assets/javascripts' -o '../../dist/js/scripts.min.js' && sass --style compressed assets/scss/style.scss:dist/css/style.min.css`
 
 ## Please keep following in mind...
 

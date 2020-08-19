@@ -1,0 +1,65 @@
+// Table-Wrapper needs this rule to scroll horizontal on < 600px width
+figure.table {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  line-height: 1.5;
+  text-align: left;
+  font-size: $f-medium;
+  min-width: 600px;
+
+  p {
+    font-size: $f-medium;
+  }
+
+  td {
+    vertical-align: top;
+    border-bottom: 1px solid rgba($white,0.125);
+    padding: 18px;
+    text-align: left !important;
+  }
+
+  tr {
+    vertical-align: top;
+    background-color: $white;
+    &:nth-child(even) {
+      background-color: darken($white,7);
+    }
+    &:hover {
+      cursor: default;
+      background-color: lighten($black, 45);
+    }
+  }
+
+  th {
+    vertical-align: top;
+    padding: $spacer/2.5;
+    color: $white;
+    background-color: $black !important;
+  }
+}
+
+.noTableBg table {
+  td {
+    border-bottom: 1px solid transparent !important;
+    padding: 13px;
+  }
+  tr {
+    background-color: transparent !important;
+    &:nth-child(even) {
+      background-color: transparent !important;;
+    }
+  }
+}
+
+// THIS IS FOR NEOS:
+//ckeditor overrides this properties, so !important is important lol
+.ck-content .table {
+  width: 100% !important;
+}
+.ck-content .table table td, .ck-content .table table th {
+  text-align: inherit !important;
+}

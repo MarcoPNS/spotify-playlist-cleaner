@@ -1,0 +1,43 @@
+/*
+
+    Use this file to set the basic color settings
+
+*/
+
+// Font
+//.f-green {
+//  color: $green;
+//}
+//
+//.f-blue {
+//  color: $blue;
+//}
+
+//
+// Background
+//
+@mixin bgWhiteMixin() {
+  background-color: $white;
+}
+
+@mixin bgGreyMixin() {
+  background-color: lighten($black,50);
+}
+
+@mixin bgBlackMixin() {
+  background-color: $black;
+  color: $white;
+}
+
+// STANDARD BG COLOR RULES
+.bgGrey {@include bgGreyMixin();}
+.bgBlack {@include bgBlackMixin();}
+// THIS SECTION HAVE TO BE BELOW STANDARD BG COLOR RULES
+.subBgWhite {@include bgWhiteMixin();}
+.subBgGrey {@include bgGreyMixin();}
+.subBgBlack {@include bgBlackMixin();}
+
+// Shadow
+.box-shadow {
+  @include box-shadow();
+}

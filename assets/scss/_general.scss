@@ -1,0 +1,44 @@
+/*
+
+    Here you can find general instructions for the website. Really only commands that don't style the website but commands that appear again and again, in every webproject
+
+*/
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%; // for safari landscape orientation bug
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-family-regular;
+  color: $black;
+  font-size: $f-standard;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+  Column set to relative
+*/
+[class*="col-"] {
+  position: relative;
+}
+
+/*
+  Section as flex
+  (needed for wordpress cms)
+*/
+section {
+  display: flex;
+}

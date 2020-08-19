@@ -1,0 +1,113 @@
+/*
+	Spacers
+*/
+
+//
+// Give container always same padding (deactivate with .no-spacers)
+//
+.container:not(.no-spacers),
+.container-fluid:not(.no-spacers),
+.container.con-spacer,
+.con-spacer {
+  padding-top: $spacer*2;
+  padding-bottom: $spacer*2;
+  @media (max-width: $md - 1) {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+  }
+}
+.container.con-spacer-big,
+.con-spacer-big {
+  padding-top: $spacer*4;
+  padding-bottom: $spacer*4;
+  @media (max-width: $md - 1) {
+    padding-top: $spacer*2;
+    padding-bottom: $spacer*2;
+  }
+}
+
+//
+// Add the space between columns (needed for mobile) (deactivate with .no-spacers)
+//
+.row:not(.no-spacers) {
+  $grid-spacer: $spacer;
+  margin-bottom: -$grid-spacer;
+  > [class*="col-"] {
+    margin-bottom: $grid-spacer;
+  }
+}
+
+//
+// Margin Spacer for Container.fusion
+//
+.con-m-y {
+  margin-top: $spacer;
+  margin-bottom: $spacer;
+  @media (max-width: $md - 1) {
+    margin-top: $spacer/2;
+    margin-bottom: $spacer/2;
+  }
+  &.big-spacer {
+    margin-top: $spacer*2;
+    margin-bottom: $spacer*2;
+    @media (max-width: $md - 1) {
+      margin-top: $spacer;
+      margin-bottom: $spacer;
+    }
+  }
+}
+.con-m-t {
+  margin-top: $spacer;
+  @media (max-width: $md - 1) {
+    margin-top: $spacer/2;
+  }
+  &.big-spacer {
+    margin-top: $spacer*2;
+    @media (max-width: $md - 1) {
+      margin-top: $spacer;
+    }
+  }
+}
+.con-m-b {
+  margin-bottom: $spacer;
+  @media (max-width: $md - 1) {
+    margin-bottom: $spacer/2;
+  }
+  &.big-spacer {
+    margin-bottom: $spacer*2;
+    @media (max-width: $md - 1) {
+      margin-bottom: $spacer;
+    }
+  }
+}
+
+//
+// Element Spacers (e.g. for Background.fusion)
+//
+.el-spacer {
+  padding: $spacer/2;
+}
+.el-spacer-big {
+  padding: $spacer;
+}
+
+//
+// Creates p-a-full, p-x-half, p-y-0 and so on
+//
+$spaceSpacer: $spacer;
+$spaceSize: (full,half,'0');
+$spaceKind: (padding,margin);
+
+@each $size in $spaceSize {
+  @if $size == 'half' {$spaceSpacer: $spacer/2;}
+  @if $size == '0' {$spaceSpacer: 0;}
+  @each $kind in $spaceKind {
+    .#{str-slice($kind, 0, 1)}-a-#{$size} {#{$kind}: #{$spaceSpacer} !important;}
+    .#{str-slice($kind, 0, 1)}-x-#{$size} {#{$kind}-left: #{$spaceSpacer} !important; #{$kind}-right: #{$spaceSpacer} !important;}
+    .#{str-slice($kind, 0, 1)}-y-#{$size} {#{$kind}-top: #{$spaceSpacer} !important; #{$kind}-bottom: #{$spaceSpacer} !important;}
+    .#{str-slice($kind, 0, 1)}-t-#{$size} {#{$kind}-top: #{$spaceSpacer} !important;}
+    .#{str-slice($kind, 0, 1)}-b-#{$size} {#{$kind}-bottom: #{$spaceSpacer} !important;}
+    .#{str-slice($kind, 0, 1)}-l-#{$size} {#{$kind}-left: #{$spaceSpacer} !important;}
+    .#{str-slice($kind, 0, 1)}-r-#{$size} {#{$kind}-right: #{$spaceSpacer} !important;}
+  }
+}
