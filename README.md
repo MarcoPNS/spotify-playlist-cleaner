@@ -8,6 +8,9 @@ If you want to work on it then fork this project.
 
 Feel free to submit PRs!
 
+## Spotify Token Swap
+You need a hosted .php file for the token swap. I provide a example later.
+
 ## Generate CSS/JS files
 
 You need sass to generate the css file and you need uglify-merge-js to generate the js file.
