@@ -236,14 +236,14 @@ $--xl-only: "only screen and (min-width: #{$--xl-min})";
   box-sizing: border-box;
   flex: 0 0 auto;
   flex-basis: 100%;
-  padding-right: $--half-gutter-width;
-  padding-left: $--half-gutter-width;
   max-width: 100%;
+  padding-left: $--half-gutter-width;
+  padding-right: $--half-gutter-width;
 }
 
 .col-xs {
-  flex-grow: 1;
   flex-basis: 0;
+  flex-grow: 1;
   max-width: 100%;
 }
 

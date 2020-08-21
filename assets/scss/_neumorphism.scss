@@ -1,0 +1,8 @@
+.content-box {
+  border: 1px solid $green;
+  box-shadow: 6px 6px 12px $grey,-6px -6px 12px $white;
+  transition: all .2s ease;
+}
+[class*=shadow] {
+  transition: all .2s ease;
+}

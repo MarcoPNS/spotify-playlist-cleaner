@@ -6,8 +6,8 @@
 
 html {
   box-sizing: border-box;
-  -ms-overflow-style: scrollbar;
   font-size: 62.5%;
+  -ms-overflow-style: scrollbar;
   -webkit-text-size-adjust: 100%; // for safari landscape orientation bug
 }
 
@@ -18,14 +18,15 @@ html {
 }
 
 body {
+  background: $black;
+  color: $white;
   font-family: $font-family-regular;
-  color: $black;
   font-size: $f-standard;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  margin: 0;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
 /*
