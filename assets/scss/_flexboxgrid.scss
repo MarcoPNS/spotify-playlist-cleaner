@@ -54,6 +54,7 @@ $--xl-only: "only screen and (min-width: #{$--xl-min})";
 @media #{$--xs-only} {
   .container {
     width: 100%;
+    max-width: 360px;
   }
 }
 
