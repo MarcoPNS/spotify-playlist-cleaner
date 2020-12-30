@@ -6,3 +6,13 @@
 [class*=shadow] {
   transition: all .2s ease;
 }
+
+.btn {
+  background: $green;
+  border-radius: 25px;
+  padding: 15px 30px;
+
+  &.inactive {
+    background: $grey;
+  }
+}

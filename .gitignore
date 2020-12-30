@@ -3,3 +3,11 @@
 .DS_Store
 
 .sass-cache/
+
+access_log
+
+error_log
+
+swap/index.php
+
+swap/redirect.php
